@@ -1,0 +1,15 @@
+services:
+  angular:
+    build:
+      context: ./
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: bash
+
+  nginx-prod:
+    image: nginx
+    volumes:
+      - ./primerProyecto/dist/primer-proyecto:/usr/share/nginx/html
+    ports:
+      - 8000:80

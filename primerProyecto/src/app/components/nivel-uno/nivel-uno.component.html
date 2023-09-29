@@ -1,0 +1,8 @@
+<p>nivel-uno works!</p>
+
+<input type="text" #nombre/>
+<button (click)="nuevoHijo(nombre.value)"></button>
+
+<app-nivel-dos *ngFor="let hijo of hijos" [name]="hijo"></app-nivel-dos>
+
+
